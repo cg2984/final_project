@@ -16,7 +16,7 @@ const posts = db.collection("posts");
 router.get("/", (req,res) => {
 	//array to put the posts in. keep the scope in the function
 	let postsArray = [];
-	blogposts.get()
+	posts.get()
 	//this is a promise
 	.then((querySnapshot) => {
 		querySnapshot.forEach((doc) => {
