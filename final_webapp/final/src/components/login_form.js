@@ -3,13 +3,12 @@ import React from "react";
 function LoginForm({LoginFunc}){
 	return (
 		<div>
-			<h1>Login Form</h1>	
 			<form onSubmit={(e) => LoginFunc(e)}>
-				<label htmlFor="loginEmail">Email</label>
+				<label htmlFor="loginEmail"><p>Email</p></label>
 				<input type = "email" name = "loginEmail"/>
-				<label htmlFor="loginPassword">Password</label>
+				<label htmlFor="loginPassword"><p>Password</p></label>
 				<input type = "password" name = "loginPassword"/>
-				<button>Login</button>
+				<button className = "buttonA"><p>Login</p></button>
 			</form>
 		</div>
 	);

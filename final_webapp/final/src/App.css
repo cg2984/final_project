@@ -1,38 +1,97 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&family=Rakkas&display=swap');
+
+.App{
+  max-width:1080px;
+  margin:0 auto;
+  text-align:center;
+}
+
+p{
+  font-family: Josefin Slab;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
+  color: #4D6B5D;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  max-width:300px;
+  margin:0 auto;
+}
+
+h1{
+  font-family: Rakkas;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 107px;
   text-align: center;
+  color: #074829;
+  text-shadow: 0px 1px 5px rgba(8, 64, 17, 0.5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2{
+  font-family: Rakkas;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  color: #4D6B5D;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3{
+  font-family: Rakkas;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  color:#000000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input{
+  border-bottom: 1px dashed #074829;
+  border-top:1px solid #FFFFFF;
+  border-left:1px solid #FFFFFF;
+  border-right:1px solid #FFFFFF;
+  margin:20px;
+  padding:10px;
+  outline:none;
 }
 
-.App-link {
-  color: #61dafb;
+input:focus{
+  border-bottom: 1px dashed #074829;
+  border-top:1px solid #FFFFFF;
+  border-left:1px solid #FFFFFF;
+  border-right:1px solid #FFFFFF;
+  margin:20px;
+  padding:10px;
+  outline:none;
+  background-color:#E2EDDE;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttonA{
+  height:40px;
+  width:220px;
+  background-color:#074829;
+  border-radius:5px;
+  outline:none;
+  border:none;
+  margin:0 auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.buttonA p{
+  font-family: Josefin Slab;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: lowercase;
+  color: #FFFFFF;
 }

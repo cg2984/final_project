@@ -4,7 +4,7 @@ import LoginForm from "../components/login_form.js"
 function Login({LoginFunc}){
 	return (
 		<div>
-			<h1>Login</h1>	
+			<h1>Forest</h1>	
 			<LoginForm LoginFunc={LoginFunc}/>
 		</div>
 	);
