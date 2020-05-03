@@ -6,7 +6,7 @@ import './App.css';
 import UserProfile from "./pages/user_profile";
 import Login from "./pages/login";
 import CreateAccount from "./pages/create_account";
-import Header from "./components/header.js"
+import Footer from "./components/footer.js"
 import {
   BrowserRouter as Router,
   Switch,
@@ -116,7 +116,6 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <Header LogoutFunc={LogoutFunc} loggedIn = {loggedIn}/>
       <Router>
         <Route exact path="/">
           {!loggedIn ? <Redirect to="/login"/> : <UserProfile userInfo={userInfo}/>}
@@ -136,6 +135,7 @@ useEffect(() => {
             )}
         </Route>
       </Router>
+      <Footer LogoutFunc={LogoutFunc} loggedIn = {loggedIn}/>
     </div>
   );
 }
