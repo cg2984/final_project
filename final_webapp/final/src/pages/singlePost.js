@@ -2,13 +2,15 @@ import React, {useEffect,useState} from 'react';
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-function Post(){
+function SinglePost(){
+	console.log("post page");
+	const { id } = useParams();
+	console.log("id",id);
 	const[postData, setPostData] = useState({});
-	//console.log("id",id);
 
 	useEffect(() => {
 			//the local host post 
-			axios.get(`http://localhost:4000/post/new-post`)
+			axios.get(`http://localhost:4000/post/${id}`)
 			//when this is in production we are going to use the heroku thing
 			  .then(function (response) {
 			    // handle success
@@ -27,9 +29,15 @@ function Post(){
 
 	return (
 		<div>
-			<p>{postData.text}</p>
+			<nav className = "Header">
+					<h2>{postData.title}</h2>
+					<button className = "buttonOpen__create"><a href="/">Home</a></button>
+			</nav>	
+			<div className = "SinglePost">
+				<p>{postData.text}</p>
+			</div>
 		</div>
 	);
 }
 
-export default Post;
+export default SinglePost;

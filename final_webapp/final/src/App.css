@@ -28,6 +28,29 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.buttonOpen__create{
+  height:21px;
+  width:118px;
+  background-color:#FFFFFF;
+  border-radius:5px;
+  outline:none;
+  border:1px solid #074829;
+  margin:8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.buttonOpen__create a{
+  font-family: Josefin Slab;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: lowercase;
+  color: #074829;
+  text-decoration:none;
+}
+
 .buttonOpen__red{
   height:40px;
   width:220px;
@@ -130,6 +153,10 @@ form{
   margin:0 auto;
 }
 
+footer{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 73.96%);
+}
+
 h1{
   font-family: Rakkas;
   font-style: normal;
@@ -148,6 +175,7 @@ h2{
   font-size: 24px;
   line-height: 36px;
   color: #4D6B5D;
+  margin:0;
 }
 
 h3{
@@ -157,6 +185,30 @@ h3{
   font-size: 24px;
   line-height: 36px;
   color:#000000;
+}
+
+.HomePost{
+  width:305px;
+  height:137;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin:25px auto;
+}
+
+.Header{
+  height:40px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 5px rgba(8, 64, 17, 0.5);
+  border-bottom: 1px solid #074829;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  margin:20px;
+}
+
+.Header h2{
+  margin-left:35px;
 }
 
 input{
@@ -195,4 +247,11 @@ p{
   letter-spacing: 0.01em;
   text-transform: lowercase;
   color: #4D6B5D;
+}
+
+.SinglePost{
+  background: #FFFFFF;
+  border: 1px solid #074829;
+  box-shadow: 0px 1px 5px rgba(8, 64, 17, 0.5);
+  border-radius: 5px;
 }

@@ -2,7 +2,7 @@ import React from "react";
 import CreateAccountForm from "../components/create_account_form"
 
 function CreateAccount({CreateFunc}){
-	return (
+	return(
 		<div>
 			<h1>Create Account</h1>	
 			<p>Enter your information down below. Everything with a * is required</p>

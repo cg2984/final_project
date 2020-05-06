@@ -7,8 +7,10 @@ import './App.css';
 import Home from "./pages/home";
 import Login from "./pages/login";
 import CreateAccount from "./pages/create_account";
+import CreatePost from "./pages/create_post";
 import Footer from "./components/footer.js"
-import Post from "./pages/post";
+import SinglePost from "./pages/singlePost";
+import axios from "axios";
 import {
   BrowserRouter as Router,
   Switch,
@@ -103,6 +105,30 @@ useEffect(() => {
       });
   }
 
+  function CreatePostFunc(e){
+    e.preventDefault();
+    let text = e.currentTarget.Text.value;
+    let title = e.currentTarget.Title.value;
+    const idFromTitle = title.replace(/\s+/g,"-").toLowerCase();
+    let userId = userInfo.uid;
+    console.log("text",text);
+    console.log("title",title)
+    //stick an uplaod image function in here if your want to stick an image in there
+
+    axios.get(`http://localhost:4000/create?text=${text}&title=${title}&id=${idFromTitle}&userId=${userId}`)
+       .then(function (response) {
+          // handle success
+          console.log("response",response);
+          })
+          .catch(function (error) {
+          // handle error
+          console.log(error);
+        })
+        .finally(function () {
+          // always executed
+        });
+  }
+
   function LogoutFunc(){
       firebase
         .auth()
@@ -116,32 +142,46 @@ useEffect(() => {
         });
 
   }
-
-
   return (
     <div className="App">
-      <Router>
-        <Route exact path="/">
-          {!loggedIn ? <Redirect to="/login"/> : <Home userInfo={userInfo}/>}
-        </Route>        
-        <Route exact path="/login">
-          {!loggedIn ? (
-            <Login LoginFunc={LoginFunc}/>
-            ) : (
-              <Redirect to="/"/>
+      <Router>     
+          <Route exact path="/post/:id">
+            {!loggedIn ? (
+              <Redirect to="/login"/> 
+              ) : (
+              <SinglePost/>
             )}
-        </Route>
-        <Route exact path="/post">
-          {!loggedIn ? <Redirect to="/login"/> : <Post/>}
-        </Route>
-        <Route exact path="/create-account">
-           {!loggedIn ? (
-           <CreateAccount CreateFunc={CreateFunc}/>
-            ) : (
-              <Redirect to="/"/>
+          </Route>  
+          
+          <Route exact path="/create-account">
+             {!loggedIn ? (
+             <CreateAccount CreateFunc={CreateFunc}/>
+              ) : (
+                <Redirect to="/"/>
+              )}
+          </Route>
+          <Route exact path="/createPost">
+            {!loggedIn ? (
+              <Redirect to="/login"/> 
+              ) : (
+              <CreatePost CreatePostFunc={CreatePostFunc}/>
             )}
-        </Route>
-      </Router>
+          </Route>
+          <Route exact path="/">
+            {!loggedIn ? (
+              <Redirect to="/login"/> 
+              ) : (
+              <Home userInfo={userInfo} loggedIn = {loggedIn} CreatePostFunc={CreatePostFunc}/>
+              )}
+          </Route>
+          <Route exact path="/login">
+            {!loggedIn ? (
+              <Login LoginFunc={LoginFunc}/>
+              ) : (
+                <Redirect to="/"/>
+              )}
+          </Route>
+        </Router>
       <Footer LogoutFunc={LogoutFunc} loggedIn = {loggedIn}/>
     </div>
   );

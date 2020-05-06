@@ -7,17 +7,18 @@ const posts = db.collection("posts");
 
 module.exports = router;
 
-//this has to be one slash because relative to the route which we already defined in the base route in app.js
-//router.get("/:id", (req,res) => res.send("Include an id in the url"));
+//post
+router.get("/", (req, res) => res.send("Please Include a post ID"));
+
+//post/post-id
 router.get("/:id", (req,res) => {
 	res.header("Access-Control-Allow-Origin", "*");
   	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-	//the id that you are going to get. the id part has to be the same in the "/:part"
-	//allows us to use routing to get different without hard coding anything
 	const queryId = req.params.id; 
-	posts.doc(queryId).get()
+	posts
+		.doc(queryId)
+		.get()
 		.then(function(doc){
-			//.exsists is a firestore thing
 			if(doc.exists){
 				return res.send(doc.data());
 			} else{
@@ -25,7 +26,7 @@ router.get("/:id", (req,res) => {
 			}
 		})
 		.catch(function (error) {
-			return res.send("No Such Document");
+			return res.send("Catch function caught something");
 		});
 });
 module.exports = router;
