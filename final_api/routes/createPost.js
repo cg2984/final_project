@@ -11,14 +11,14 @@ const db = firebase.firestore();
 const posts = db.collection("posts");
 
 //submits the form
-router.get("/submit", (req,res) => {
+router.get("/", (req,res) => {
+	res.header("Access-Control-Allow-Origin", "*");
+  	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	const queryParams = req.query;
-	//a regular expression or regex
-	//removes the spaces from the new posts that you submit and replaces it with dashes
 	console.log("queryParams",queryParams);
 	posts
 		//this makes the id in the database the title of the post
-		.doc(idFromTitle)
+		.doc(queryParams.id)
 		.set(queryParams)
 		.then(function(doc){
 			console.log("sent");

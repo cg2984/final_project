@@ -2,11 +2,13 @@ import React, {useEffect,useState} from 'react';
 //the star means import everything
 import * as firebase from "firebase/app";
 import "firebase/auth";
+//import firebase/storage
 import './App.css';
 import Home from "./pages/home";
 import Login from "./pages/login";
 import CreateAccount from "./pages/create_account";
 import Footer from "./components/footer.js"
+import Post from "./pages/post";
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,6 +20,8 @@ function App() {
   const[loggedIn, setLoggedIn] = useState(false);
   const[loading, setLoading] = useState(true);
   const[userInfo,setUserInfo] = useState({});
+  //this is stuff for images
+  //const [storageRef,  setStorageRef] = useState(null);
 
   //firebase config. should remain at the top of the app
   const firebaseConfig = {
@@ -119,13 +123,16 @@ useEffect(() => {
       <Router>
         <Route exact path="/">
           {!loggedIn ? <Redirect to="/login"/> : <Home userInfo={userInfo}/>}
-        </Route>
+        </Route>        
         <Route exact path="/login">
           {!loggedIn ? (
             <Login LoginFunc={LoginFunc}/>
             ) : (
               <Redirect to="/"/>
             )}
+        </Route>
+        <Route exact path="/post">
+          {!loggedIn ? <Redirect to="/login"/> : <Post/>}
         </Route>
         <Route exact path="/create-account">
            {!loggedIn ? (
