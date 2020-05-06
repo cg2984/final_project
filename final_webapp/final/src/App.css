@@ -73,6 +73,19 @@
   color: #FFFFFF;
 }
 
+.buttonClosed p:hover{
+  font-family: Josefin Slab;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: lowercase;
+  color: #FFFFFF;
+  text-decoration:none;
+  cursor:pointer;
+}
+
 .buttonOpen a{
   font-family: Josefin Slab;
   font-style: normal;
@@ -95,6 +108,19 @@
   text-transform: lowercase;
   color: #074829;
   text-decoration:none;
+}
+
+.buttonOpen p:hover{
+  font-family: Josefin Slab;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: lowercase;
+  color: #074829;
+  text-decoration:none;
+  cursor:pointer;
 }
 
 form{

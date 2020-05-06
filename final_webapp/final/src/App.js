@@ -3,7 +3,7 @@ import React, {useEffect,useState} from 'react';
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import './App.css';
-import UserProfile from "./pages/user_profile";
+import Home from "./pages/home";
 import Login from "./pages/login";
 import CreateAccount from "./pages/create_account";
 import Footer from "./components/footer.js"
@@ -118,7 +118,7 @@ useEffect(() => {
     <div className="App">
       <Router>
         <Route exact path="/">
-          {!loggedIn ? <Redirect to="/login"/> : <UserProfile userInfo={userInfo}/>}
+          {!loggedIn ? <Redirect to="/login"/> : <Home userInfo={userInfo}/>}
         </Route>
         <Route exact path="/login">
           {!loggedIn ? (
