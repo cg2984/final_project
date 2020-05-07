@@ -7,7 +7,7 @@ function Home({userInfo, loggedIn}){
 	const myArray = [1,2,3,4,5];
 	//getting all of the posts
 	useEffect(() => {
-			axios.get(`http://localhost:4000/`)
+			axios.get(`https://forest-final.herokuapp.com/`)
 			  .then(function (response) {
 			    // handle success
 			    console.log(response);
@@ -40,8 +40,7 @@ function Home({userInfo, loggedIn}){
 			{allPosts.map((post, i) => (
 				<div className = "HomePost">
 					<h2 key = {i}>{post.title}</h2>
-					<p key = {i}>{post.text}</p> 
-					<a href = {`/post/${post.id}`}>View Post</a>
+					<a href = {`/post/${post.id}`}>{post.text}</a>
 				</div>
 			))}
 		</div>

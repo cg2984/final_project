@@ -30,10 +30,10 @@ function SinglePost(){
 	return (
 		<div>
 			<nav className = "Header">
-					<h2>{postData.title}</h2>
 					<button className = "buttonOpen__create"><a href="/">Home</a></button>
 			</nav>	
 			<div className = "SinglePost">
+				<h2>{postData.title}</h2>
 				<p>{postData.text}</p>
 			</div>
 		</div>

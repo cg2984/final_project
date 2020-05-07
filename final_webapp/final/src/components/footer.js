@@ -3,10 +3,9 @@ import React from "react";
 function Footer({LogoutFunc, loggedIn}){
 	return (
 		<div>
-			<nav>
-				<hr/>
+			<footer>
 				{loggedIn && <button className = "buttonOpen__red"><a onClick = {() => LogoutFunc()}>Log Out</a></button>}
-			</nav>
+			</footer>
 		</div>
 	);
 }
