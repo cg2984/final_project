@@ -10,7 +10,7 @@ function SinglePost(){
 
 	useEffect(() => {
 			//the local host post 
-			axios.get(`http://localhost:4000/post/${id}`)
+			axios.get(`https://forest-final.herokuapp.com/post/${id}`)
 			//when this is in production we are going to use the heroku thing
 			  .then(function (response) {
 			    // handle success

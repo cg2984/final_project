@@ -1,2 +1,5 @@
 
 final_api/test.js
+
+# Local Netlify folder
+.netlify

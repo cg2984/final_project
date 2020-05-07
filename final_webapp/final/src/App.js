@@ -116,7 +116,7 @@ useEffect(() => {
     console.log("title",title)
     //stick an uplaod image function in here if your want to stick an image in there
 
-    axios.get(`http://localhost:4000/create?text=${text}&title=${title}&id=${idFromTitle}&userId=${userId}`)
+    axios.get(`https://forest-final.herokuapp.com/create?text=${text}&title=${title}&id=${idFromTitle}&userId=${userId}`)
        .then(function (response) {
           // handle success
           console.log("response",response);
