@@ -13,7 +13,6 @@ function Home({userInfo, loggedIn, LogoutFunc}){
 			    console.log(response);
 			    setAllPosts(response.data);
 			    console.log("response.data", response.data);
-
 			  })
 			  .catch(function (error) {
 			    // handle error
@@ -26,7 +25,6 @@ function Home({userInfo, loggedIn, LogoutFunc}){
 
 	console.log(myArray);
 	console.log("all posts", allPosts);
-
 	//function UploadImage()
 	//const = storageref = firebase.sotrage().ref();
 	//const fileReference = e.currentTarget

@@ -4,7 +4,7 @@ import CreateAccountForm from "../components/create_account_form"
 function CreateAccount({CreateFunc}){
 	return(
 		<div>
-			<h1>Create Account</h1>	
+			<h2>Create Account</h2>	
 			<p>Enter your information down below. Everything with a * is required</p>
 			<CreateAccountForm CreateFunc={CreateFunc}/>
 			<hr/>
