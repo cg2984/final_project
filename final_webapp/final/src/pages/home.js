@@ -2,7 +2,7 @@ import React, {useEffect,useState} from 'react';
 import axios from 'axios';
 import CreatePostForm from "../components/create_post_form.js"
 
-function Home({userInfo, loggedIn}){
+function Home({userInfo, loggedIn, LogoutFunc}){
 	const[allPosts, setAllPosts] = useState([]);
 	const myArray = [1,2,3,4,5];
 	//getting all of the posts
@@ -35,7 +35,7 @@ function Home({userInfo, loggedIn}){
 		<div>
 			<nav className = "Header">
 				<h2>Home</h2>
-				<button className = "buttonOpen__create"><a href="/createPost">Create Post</a></button>
+				<button className = "buttonOpen__red"><a onClick = {() => LogoutFunc()}>Log Out</a></button>
 			</nav>
 			{allPosts.map((post, i) => (
 				<div className = "HomePost">

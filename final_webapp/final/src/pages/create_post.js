@@ -6,7 +6,7 @@ function CreatePost({CreatePostFunc}){
 		<div>
 			<nav className = "Header">
 				<h2>New Post</h2>
-				<button className = "buttonOpen__create"><a href="/">Home</a></button>
+				<button className = "buttonOpen__red"><a href="/">Home</a></button>
 			</nav>	
 			<p>Enter your information down below. Everything with a * is required</p>
 			<CreatePostForm CreatePostFunc={CreatePostFunc}/>

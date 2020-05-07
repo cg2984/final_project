@@ -173,7 +173,7 @@ useEffect(() => {
             {!loggedIn ? (
               <Redirect to="/login"/> 
               ) : (
-              <Home userInfo={userInfo} loggedIn = {loggedIn} CreatePostFunc={CreatePostFunc}/>
+              <Home userInfo={userInfo} loggedIn = {loggedIn} LogoutFunc={LogoutFunc}/>
               )}
           </Route>
           <Route exact path="/login">
@@ -184,7 +184,7 @@ useEffect(() => {
               )}
           </Route>
         </Router>
-      <Footer LogoutFunc={LogoutFunc} loggedIn = {loggedIn}/>
+      <Footer CreatePostFunc={CreatePostFunc} loggedIn = {loggedIn}/>
     </div>
   );
 }

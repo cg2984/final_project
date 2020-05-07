@@ -28,37 +28,14 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.buttonOpen__create{
+.buttonOpen__red{
   height:21px;
   width:118px;
-  background-color:#FFFFFF;
-  border-radius:5px;
-  outline:none;
-  border:1px solid #074829;
-  margin:8px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.buttonOpen__create a{
-  font-family: Josefin Slab;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-  text-transform: lowercase;
-  color: #074829;
-  text-decoration:none;
-}
-
-.buttonOpen__red{
-  height:40px;
-  width:220px;
-  background-color:#FFFFFF;
+   background-color:#FFFFFF;
   border-radius:5px;
   outline:none;
   border:1px solid #9A260C;
-  margin:10px auto;
+  margin:8px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -71,7 +48,7 @@
   text-align: center;
   text-transform: lowercase;
   color: #9A260C;
-  text-decoration:none;
+  text-decoration:none
 }
 
 .buttonClosed a{
@@ -157,7 +134,8 @@ footer{
   position:fixed;
   bottom:0;
   width:100%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 73.96%);
+  height:15%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 60%);
 }
 
 h1{

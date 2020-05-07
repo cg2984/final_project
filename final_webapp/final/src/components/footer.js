@@ -1,10 +1,10 @@
 import React from "react";
 
-function Footer({LogoutFunc, loggedIn}){
+function Footer({CreatePostFunc, loggedIn}){
 	return (
 		<div>
 			<footer>
-				{loggedIn && <button className = "buttonOpen__red"><a onClick = {() => LogoutFunc()}>Log Out</a></button>}
+				{loggedIn && <button className = "buttonOpen"><a href = "/createPost">Create Post</a></button>}
 			</footer>
 		</div>
 	);
