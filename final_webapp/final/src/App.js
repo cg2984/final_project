@@ -56,17 +56,18 @@ function App() {
 //checking to see if the user is logged in
 useEffect(() => {
   firebase.auth().onAuthStateChanged(function(user){
-    //Logged In
     if(user){
+      //Logged In
       setLoggedIn(true);
       setUserInfo(user);
       console.log("logged in");
     }
-    //logged out
     else{
+      //not logged in
       setLoggedIn(false);
       console.log("logged out");
     }
+    setLoading(false);
   })
 },[]);
 
@@ -142,6 +143,7 @@ useEffect(() => {
         });
 
   }
+  if (loading) return null;
   return (
     <div className="App">
       <Router>     
