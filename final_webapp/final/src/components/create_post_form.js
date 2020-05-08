@@ -8,7 +8,7 @@ function CreatePostForm({CreatePostFunc}){
 				<input type = "text" name = "Title"/>
 				<label htmlFor="text"><p>Write Something!</p></label>
 				<input type = "text" name = "Text"/>
-				<button className = "buttonClosed"><a href="/">Create Post</a></button>
+				<button className = "buttonClosed">Create Post</button>
 			</form>
 		</div>
 	);
