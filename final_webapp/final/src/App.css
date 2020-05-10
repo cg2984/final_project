@@ -240,14 +240,17 @@ nav{
 }
 
 p{
-  font-family: Josefin Slab;
+  font-family: Share Tech Mono;
   font-style: normal;
-  font-weight: 600;
+  font-weight: normal;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
   letter-spacing: 0.01em;
   text-transform: lowercase;
-  color: #4D6B5D;
+  color: #FFFFFF;
 }
 
 .SinglePost{
