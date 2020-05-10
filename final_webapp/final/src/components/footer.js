@@ -1,6 +1,8 @@
 import React from "react";
 
 function Footer({CreatePostFunc, loggedIn}){
+	let day = new Date();
+  	let hour = day.getHours();
 	return (
 		<div>
 			<footer>
