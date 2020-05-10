@@ -6,6 +6,10 @@
   text-align:center;
 }
 
+.allPosts{
+  height:90%;
+}
+
 .buttonClosed{
   height:40px;
   width:220px;

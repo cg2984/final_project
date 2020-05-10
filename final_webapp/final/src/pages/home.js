@@ -35,12 +35,14 @@ function Home({userInfo, loggedIn, LogoutFunc}){
 				<h2>Home</h2>
 				<button className = "buttonOpen__red"><a onClick = {() => LogoutFunc()}>Log Out</a></button>
 			</nav>
-			{allPosts.map((post, i) => (
-				<div className = "HomePost">
-					<h2 key = {i}>{post.title}</h2>
-					<a href = {`/post/${post.id}`}>{post.text}</a>
-				</div>
-			))}
+			<div className = "allPosts">
+				{allPosts.map((post, i) => (
+					<div className = "HomePost">
+						<h2 key = {i}>{post.title}</h2>
+						<a href = {`/post/${post.id}`}>{post.text}</a>
+					</div>
+				))}
+			</div>
 		</div>
 	);
 }
