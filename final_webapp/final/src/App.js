@@ -198,6 +198,7 @@ useEffect(() => {
                 <Redirect to="/"/>
               )}
           </Route>
+          <Footer CreatePostFunc={CreatePostFunc} loggedIn={loggedIn}/>
         </Router>
     </div>
   );

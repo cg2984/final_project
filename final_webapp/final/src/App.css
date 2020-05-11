@@ -1,9 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&family=Rakkas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Roboto+Mono:wght@300&display=swap');
 
 .App{
   max-width:1080px;
   margin:0 auto;
   text-align:center;
+  background-color:black;
+}
+
+a{
+  font-family: Roboto Mono;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
+  color: #FFFFFF;
+  text-decoration:none;
 }
 
 .allPosts{
@@ -13,8 +25,7 @@
 .buttonClosed{
   height:40px;
   width:220px;
-  background-color:#074829;
-  border-radius:5px;
+  background-color:#48FFF4;
   outline:none;
   border:none;
   margin:10px auto;
@@ -24,10 +35,9 @@
 .buttonOpen{
   height:40px;
   width:220px;
-  background-color:#FFFFFF;
-  border-radius:5px;
+  background-color:#000000;
   outline:none;
-  border:1px solid #074829;
+  border:1px solid #48FFF4;
   margin:10px auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -35,75 +45,71 @@
 .buttonOpen__red{
   height:21px;
   width:118px;
-   background-color:#FFFFFF;
-  border-radius:5px;
+  background-color:#000000;
   outline:none;
-  border:1px solid #9A260C;
+  border:1px solid #ff4a3d;
   margin:8px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .buttonOpen__red a{
-  font-family: Josefin Slab;
-  font-style: normal;
-  font-weight: 600;
+  font-family: Roboto Mono;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 16px;
   text-align: center;
+  letter-spacing: 0.01em;
   text-transform: lowercase;
-  color: #9A260C;
-  text-decoration:none
+  color: #ff4a3d;
 }
 
 .buttonClosed a{
-  font-family: Josefin Slab;
-  font-style: normal;
-  font-weight: 600;
+  font-family: Roboto Mono;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 16px;
   text-align: center;
+  letter-spacing: 0.01em;
   text-transform: lowercase;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .buttonClosed p{
-  font-family: Josefin Slab;
+  font-family: Roboto Mono;
   font-style: normal;
-  font-weight: 600;
+  font-weight: normal;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 16px;
   text-align: center;
+  letter-spacing: 0.01em;
   text-transform: lowercase;
-  color: #FFFFFF;
+  color:black;
 }
 
 .buttonClosed p:hover{
-  font-family: Josefin Slab;
+  font-family: Roboto Mono;
   font-style: normal;
-  font-weight: 600;
+  font-weight: normal;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 16px;
   text-align: center;
+  letter-spacing: 0.01em;
   text-transform: lowercase;
-  color: #FFFFFF;
-  text-decoration:none;
-  cursor:pointer;
 }
 
 .buttonOpen a{
-  font-family: Josefin Slab;
+  font-family: Roboto Mono;
   font-style: normal;
-  font-weight: 600;
+  font-weight: normal;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 16px;
   text-align: center;
+  letter-spacing: 0.01em;
   text-transform: lowercase;
-  color: #074829;
   text-decoration:none;
+  color:#48FFF4;
 }
 
 .buttonOpen p{
-  font-family: Josefin Slab;
+  font-family: Roboto Mono;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -115,7 +121,7 @@
 }
 
 .buttonOpen p:hover{
-  font-family: Josefin Slab;
+  font-family: Roboto Mono;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -125,6 +131,13 @@
   color: #074829;
   text-decoration:none;
   cursor:pointer;
+}
+
+.enter{
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  justify-content:center;
 }
 
 form{
@@ -139,67 +152,84 @@ footer{
   bottom:0;
   width:100%;
   height:15%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 60%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000000 60%);
 }
 
 h1{
-  font-family: Rakkas;
+  font-family: Monoton;
   font-style: normal;
   font-weight: normal;
-  font-size: 72px;
-  line-height: 107px;
+  font-size: 48px;
+  line-height: 75px;
   text-align: center;
-  color: #074829;
-  text-shadow: 0px 1px 5px rgba(8, 64, 17, 0.5);
+  background: -webkit-linear-gradient(#48FFF4, #80FF01);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2{
-  font-family: Rakkas;
+  font-family: Monoton;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 36px;
-  color: #4D6B5D;
-  margin:0;
+  font-size: 35px;
+  background: -webkit-linear-gradient(#48FFF4, #80FF01);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h3{
-  font-family: Rakkas;
+  font-family: Roboto Mono;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 36px;
-  color:#000000;
+  font-size: 35px;
+  background: -webkit-linear-gradient(#48FFF4, #80FF01);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height:;
+  margin:0 auto 10px auto;
 }
 
 .HomePost{
-  width:305px;
+  width:350px;
   height:137;
   background: #f0edeb;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin:25px auto;
   padding:20px;
   display:flex;
   flex-direction:column;
-  text-align:left;
+  text-align:center;
+  background-color:#1D1D1D;
 }
 
 .HomePost a{
-  font-family: Josefin Slab;
-  font-style: normal;
-  font-weight: 600;
+  font-family: Roboto Mono;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 16px;
   text-align: center;
+  letter-spacing: 0.01em;
   text-transform: lowercase;
-  color: #074829;
+  color: #FFFFFF;
+  text-decoration:none;
+}
+
+.HomePost a:hover{
+  font-family: Roboto Mono;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
+   background: -webkit-linear-gradient(#48FFF4, #80FF01);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height:;
   text-decoration:none;
 }
 
 .Header{
   height:40px;
-  background: #FFFFFF;
+  background: #000000;
   border-bottom: 1px solid #074829;
   display:flex;
   flex-direction:row;
@@ -212,25 +242,66 @@ h3{
   margin-left:35px;
 }
 
+hr{
+   border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, #48FFF4, #80FF01, #48FFF4);
+    width:500px;
+}
+
 input{
-  border-bottom: 1px dashed #074829;
-  border-top:1px solid #FFFFFF;
-  border-left:1px solid #FFFFFF;
-  border-right:1px solid #FFFFFF;
+  border-bottom: 1px solid #000000;
+  border-top:1px solid #000000;
+  border-left:1px solid #000000;
+  border-right:1px solid #000000;
   margin:20px;
   padding:10px;
   outline:none;
+  background-color:#1D1D1D;
+
+}
+
+input[type=text]{
+  font-family: Roboto Mono;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
+  color: #48FFF4;
+  text-decoration:none;
+  height:50px;
+}
+
+input[type=email]{
+  font-family: Roboto Mono;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
+  color: #48FFF4;
+  text-decoration:none;
+  height:40px;
+}
+
+input[type=password]{
+  font-family: Roboto Mono;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
+  color: #48FFF4;
+  text-decoration:none;
+  height:40px;
 }
 
 input:focus{
-  border-bottom: 1px dashed #074829;
-  border-top:1px solid #FFFFFF;
-  border-left:1px solid #FFFFFF;
-  border-right:1px solid #FFFFFF;
   margin:20px;
   padding:10px;
   outline:none;
-  background-color:#E2EDDE;
+  border:1px solid #48FFF4;
 }
 
 nav{
@@ -240,19 +311,21 @@ nav{
 }
 
 p{
-  font-family: Josefin Slab;
-  font-style: normal;
-  font-weight: 600;
+  font-family: Roboto Mono;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 16px;
+  text-align: center;
   letter-spacing: 0.01em;
   text-transform: lowercase;
-  color: #4D6B5D;
+  color: #FFFFFF;
 }
 
 .SinglePost{
-  background: #FFFFFF;
+  background: #000000;
   border-radius: 5px;
   text-align:left;
   margin:30px;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
 }

@@ -33,7 +33,7 @@ function SinglePost(){
 					<button className = "buttonOpen__red"><a href="/">Home</a></button>
 			</nav>	
 			<div className = "SinglePost">
-				<h2>{postData.title}</h2>
+				<h3>{postData.title}</h3>
 				<p>{postData.text}</p>
 			</div>
 		</div>
