@@ -6,6 +6,7 @@ import "firebase/auth";
 import './App.css';
 import Home from "./pages/home";
 import Login from "./pages/login";
+import Entrance from "./pages/entrance";
 import CreateAccount from "./pages/create_account";
 import CreatePost from "./pages/create_post";
 import Footer from "./components/footer.js"
@@ -18,12 +19,18 @@ import {
   Redirect
 } from "react-router-dom";
 
+
 function App() {
   const[loggedIn, setLoggedIn] = useState(false);
   const[loading, setLoading] = useState(true);
   const[userInfo,setUserInfo] = useState({});
   //this is stuff for images
   //const [storageRef,  setStorageRef] = useState(null);
+
+  let day = new Date();
+  let hour = day.getHours();
+  console.log("hour", hour);
+
 
   //firebase config. should remain at the top of the app
   const firebaseConfig = {
@@ -170,10 +177,18 @@ useEffect(() => {
             )}
           </Route>
           <Route exact path="/">
-            {!loggedIn ? (
-              <Redirect to="/login"/> 
+            {hour > 19 ? (
+              <Redirect to="/home"/> 
               ) : (
-              <Home userInfo={userInfo} loggedIn = {loggedIn} LogoutFunc={LogoutFunc}/>
+              <Entrance/>
+            )}
+
+          </Route>
+          <Route exact path="/home">
+            {!loggedIn ? (
+              <Redirect to="login"/>
+              ) : (
+                <Home userInfo={userInfo} loggedIn = {loggedIn} LogoutFunc={LogoutFunc}/>
               )}
           </Route>
           <Route exact path="/login">
@@ -184,7 +199,6 @@ useEffect(() => {
               )}
           </Route>
         </Router>
-      <Footer CreatePostFunc={CreatePostFunc} loggedIn = {loggedIn}/>
     </div>
   );
 }
