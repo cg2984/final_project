@@ -24,12 +24,11 @@ function App() {
   const[loggedIn, setLoggedIn] = useState(false);
   const[loading, setLoading] = useState(true);
   const[userInfo,setUserInfo] = useState({});
+  const[hour, setHour] = useState(0);
   //this is stuff for images
   //const [storageRef,  setStorageRef] = useState(null);
 
   let day = new Date();
-  let hour = day.getHours();
-  console.log("hour", hour);
 
 
   //firebase config. should remain at the top of the app
@@ -42,6 +41,10 @@ function App() {
       messagingSenderId: "639730610898",
       appId: "1:639730610898:web:0f55e88188d8d31f3c730b"
   };
+
+  useEffect(() => {
+    setHour = day.getHours();
+  },[]);
 
   //to make sure that firebase loads after page loads
   useEffect(() => {
