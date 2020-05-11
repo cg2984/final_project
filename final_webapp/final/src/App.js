@@ -177,7 +177,7 @@ useEffect(() => {
             )}
           </Route>
           <Route exact path="/">
-            {hour > 19 ? (
+            { hours > 19 ? (
               <Redirect to="/home"/> 
               ) : (
               <Entrance/>
