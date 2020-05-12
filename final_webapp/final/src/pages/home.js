@@ -38,7 +38,7 @@ function Home({userInfo, loggedIn, LogoutFunc}){
 			<div className = "allPosts">
 				{allPosts.map((post, i) => (
 					<div className = "HomePost">
-						<h2>{post.title}</h2>
+						<h3>{post.title}</h3>
 						<a className = "HomeLink" href = {`/post/${post.id}`}>See Post</a>
 					</div>
 				))}

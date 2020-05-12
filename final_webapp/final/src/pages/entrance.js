@@ -3,7 +3,7 @@ import React from "react";
 function Entrance(){
 	return (
 		<div className = "enter">
-			<p>Hello! The Nightclub isn't open now. It will be open at 7pm!</p>
+			<h1>Hello! The Nightclub will be open at 7pm!</h1>
 		</div>
 	);
 }

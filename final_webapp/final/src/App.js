@@ -43,7 +43,7 @@ function App() {
   };
 
   useEffect(() => {
-    setHour = day.getHours();
+    setHour(day.getHours());
   },[]);
 
   //to make sure that firebase loads after page loads
