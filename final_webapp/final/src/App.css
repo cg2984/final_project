@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Roboto+Mono:wght@300&display=swap');
 
+
 .App{
   max-width:1080px;
   margin:0 auto;
@@ -20,6 +21,9 @@ a{
 
 .allPosts{
   margin: 50px  auto 125px auto;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
 }
 
 .buttonClosed{
@@ -191,7 +195,6 @@ h3{
 
 .HomePost{
   width:350px;
-  height:137;
   background: #f0edeb;
   border-radius: 5px;
   margin:25px auto;
@@ -200,6 +203,11 @@ h3{
   flex-direction:column;
   text-align:center;
   background-color:#1D1D1D;
+}
+.HomePost:hover{
+ border:1px solid #48FFF4;
+ padding:19px;
+ box-shadow: 5px 5px #80FF01;
 }
 
 .HomePost a{
@@ -220,11 +228,8 @@ h3{
   text-align: center;
   letter-spacing: 0.01em;
   text-transform: lowercase;
-   background: -webkit-linear-gradient(#48FFF4, #80FF01);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height:;
-  text-decoration:none;
+  color:#48FFF4;
+   
 }
 
 .Header{
@@ -326,6 +331,12 @@ p{
   text-align:left;
   margin:30px;
   display:flex;
-  flex-direction:column;
+  flex-direction:row;
   text-align:center;
+  align-items:center;
+  justify-items: center;
+}
+
+.SinglePost h2{
+  flex-basis: 50%
 }
