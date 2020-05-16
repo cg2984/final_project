@@ -13,9 +13,9 @@
 
 .App{
   max-width:1080px;
-  margin:0 auto;
+  margin:0px auto;
   text-align:center;
-  background-color:black;
+  background-color:#1D1D1D;
 }
 
 a{
@@ -179,7 +179,9 @@ footer{
   bottom:0;
   width:100%;
   height:15%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000000 60%);
+  background-color:black;
+  display:flex;
+  flex-direction:row;
 }
 
 h1{
@@ -225,7 +227,7 @@ h3:hover{
 }
 
 .HomePost{
-  width:350px;
+  width:80%;
   background: #f0edeb;
   border-radius: 5px;
   margin:25px auto;
@@ -234,12 +236,10 @@ h3:hover{
   flex-direction:column;
   text-align:center;
   background-color:#1D1D1D;
+  border:1px solid #48FFF4;
+  box-shadow: 5px 5px #80FF01;
 }
-.HomePost:hover{
- border:1px solid #48FFF4;
- padding:19px;
- box-shadow: 5px 5px #80FF01;
-}
+ 
 
 .HomePost a{
   font-family: Jost;
@@ -268,7 +268,7 @@ h3:hover{
 
 .Header{
   height:40px;
-  background: #000000;
+  background: #1D1D1D;
   border-bottom: 1px solid #074829;
   display:flex;
   flex-direction:row;
