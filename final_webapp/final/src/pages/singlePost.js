@@ -34,7 +34,9 @@ function SinglePost(){
 			</nav>	
 			<div className = "SinglePost">
 				<h3>{postData.title}</h3>
+				<hr/>
 				<p>{postData.text}</p>
+				<p className = "date">1.10.19</p>
 			</div>
 		</div>
 	);

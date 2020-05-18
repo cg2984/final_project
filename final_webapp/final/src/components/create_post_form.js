@@ -5,7 +5,7 @@ function CreatePostForm({CreatePostFunc}){
 		<div>
 			<form onSubmit={(e) => CreatePostFunc(e)}>
 				<label htmlFor="title"><p>Title</p></label>
-				<input type = "text" name = "Title"/>
+				<input type = "text" name = "Title" maxlength = "20"/>
 				<label htmlFor="text"><p>Write Something!</p></label>
 				<input type = "text" name = "Text"/>
 				<button className = "buttonClosed"><p>Create Post</p></button>

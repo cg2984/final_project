@@ -6,8 +6,8 @@ function Footer({CreatePostFunc, loggedIn}){
 	return (
 		<div>
 			<footer>
-				{loggedIn && <button className = "buttonOpen"><a href = "/home">Home</a></button>}
-				{loggedIn && <button className = "buttonOpen"><a href = "/createPost">Create Post</a></button>}
+				{loggedIn && <button className = "buttonOpen__footer"><a href = "/">Home</a></button>}
+				{loggedIn && <button className = "buttonOpen__footer"><a href = "/createPost">Create Post</a></button>}
 			</footer>
 		</div>
 	);

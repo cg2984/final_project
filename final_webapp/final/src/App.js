@@ -180,14 +180,6 @@ useEffect(() => {
             )}
           </Route>
           <Route exact path="/">
-            { hour > 19 || hour < 5 ? (
-              <Redirect to="/home"/> 
-              ) : (
-              <Entrance/>
-            )}
-
-          </Route>
-          <Route exact path="/home">
             {!loggedIn ? (
               <Redirect to="login"/>
               ) : (
