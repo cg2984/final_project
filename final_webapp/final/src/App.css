@@ -13,8 +13,11 @@
 
 .App{
   max-width:1080px;
-  margin:0px auto;
-  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-content:center;
+  justify-content:center;
+  margin:0 auto;
 }
 
 a{
@@ -30,10 +33,10 @@ a{
 }
 
 .allPosts{
-  margin: 10px;
   display:flex;
   flex-direction:row;
   flex-wrap:wrap;
+  margin:50px auto;
 }
 
 .buttonClosed{
@@ -179,8 +182,8 @@ h3{
 }
 
 .HomePost{
-  width:90%;
-  height:140px;
+  width:300px;
+  height:300px;
   background-color: #FEECDE;
   border-radius: 5px;
   margin:15px auto;
@@ -212,7 +215,7 @@ h3{
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 1px 5px rgba(61, 38, 4, 0.5);
-  width:100%;
+  width:70%;
 }
 
 .Header h2{
