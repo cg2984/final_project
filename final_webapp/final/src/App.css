@@ -1,22 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Shrikhand&display=swap');
 
 
-@keyframes main{
-  from{
-    color:#48FFF4;
-  }
-  to{
-    color:#80FF01;
-  }
-}
 
 
 .App{
   max-width:1080px;
-  display:flex;
-  flex-direction:column;
-  align-content:center;
-  justify-content:center;
   margin:0 auto;
 }
 
@@ -37,6 +25,10 @@ a{
   flex-direction:row;
   flex-wrap:wrap;
   margin:50px auto;
+}
+
+.account_form{
+  margin: 0 0 30px 0;
 }
 
 .buttonClosed{
@@ -121,6 +113,16 @@ a{
   color: #B1C8F6;
 }
 
+.create_wrapper{
+  margin:80px auto;
+}
+
+.create_account{
+  margin:0px auto;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
 
 .date{
   text-align:right;
@@ -131,13 +133,14 @@ form{
   display:flex;
   flex-direction:column;
   max-width:300px;
-  margin:0 auto;
+  margin:30px auto;
   text-align:center;
 }
 
 footer{
   position:fixed;
   bottom:0;
+  left:0;
   width:100%;
   display:flex;
   flex-direction:row;
@@ -181,12 +184,17 @@ h3{
   padding:10px;
 }
 
+.Home{
+  display:flex;
+  flex-direction:column;
+}
+
 .HomePost{
   width:300px;
-  height:300px;
+  height:150px;
   background-color: #FEECDE;
   border-radius: 5px;
-  margin:15px auto;
+  margin:15px;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -215,7 +223,9 @@ h3{
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 1px 5px rgba(61, 38, 4, 0.5);
-  width:70%;
+  width:100%;
+  margin:0;
+  left:0;
 }
 
 .Header h2{
@@ -249,6 +259,7 @@ input[type=text]{
   letter-spacing: 0.01em;
   text-transform: lowercase;
   color: #13043D;
+  margin:15px auto;
 }
 
 input[type=email]{
@@ -260,6 +271,7 @@ input[type=email]{
   letter-spacing: 0.01em;
   text-transform: lowercase;
   color: #13043D;
+  margin:10px auto;
 }
 
 input[type=password]{
@@ -271,12 +283,14 @@ input[type=password]{
   letter-spacing: 0.01em;
   text-transform: lowercase;
   color: #13043D;
+  margin:10px auto;
 }
 
 input:focus{
   margin:20px;
   outline:none;
   border:1px solid #2D2C72;
+  margin:10px auto;
 }
 
 p{
@@ -287,19 +301,24 @@ p{
   letter-spacing: 0.01em;
   text-transform: lowercase;
   color:#2D2C72;
+  margin:0 20px;
+}
 
+.postText{
+  height:200px;
 }
 
 .SinglePost{
   height:440px;
   background: #FEECDE;
   border-radius: 5px;
-  margin:30px;
+  margin:60px 20px;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-items: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align:center;
 }
 
 .SinglePost h2{
@@ -307,8 +326,27 @@ p{
   color:#3D2604;
 }
 
+.signUpForm{
+  margin:20px auto;
+}
 
 .SinglePost p{
   margin:auto 20px;
   color:#3D2604;
+}
+
+.login{
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  align-content:space-between;
+  justify-content: center;
+}
+
+@media (max-width: 650px){
+  .allPosts{
+    display:flex;
+    flex-direction:column;
+  }
 }

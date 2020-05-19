@@ -6,7 +6,6 @@ import "firebase/auth";
 import './App.css';
 import Home from "./pages/home";
 import Login from "./pages/login";
-import Entrance from "./pages/entrance";
 import CreateAccount from "./pages/create_account";
 import CreatePost from "./pages/create_post";
 import Footer from "./components/footer.js"
@@ -28,7 +27,11 @@ function App() {
   //this is stuff for images
   //const [storageRef,  setStorageRef] = useState(null);
 
-  let day = new Date();
+  let date  = new Date
+  let day = date.getDate();
+  let month = date.getMonth();
+  let year = date.getYear();
+  let today = month + "." + day + "." + year
 
 
   //firebase config. should remain at the top of the app
@@ -41,10 +44,6 @@ function App() {
       messagingSenderId: "639730610898",
       appId: "1:639730610898:web:0f55e88188d8d31f3c730b"
   };
-
-  useEffect(() => {
-    setHour(day.getHours());
-  },[]);
 
   //to make sure that firebase loads after page loads
   useEffect(() => {
@@ -120,13 +119,13 @@ useEffect(() => {
     e.preventDefault();
     let text = e.currentTarget.Text.value;
     let title = e.currentTarget.Title.value;
+    let date = today;
     const idFromTitle = title.replace(/\s+/g,"-").toLowerCase();
     let userId = userInfo.uid;
     console.log("text",text);
-    console.log("title",title)
-    //stick an uplaod image function in here if your want to stick an image in there
-
-    axios.get(`https://forest-final.herokuapp.com/create?text=${text}&title=${title}&id=${idFromTitle}&userId=${userId}`)
+    console.log("title",title);
+    console.log("date",date);
+    axios.get(`https://forest-final.herokuapp.com/create?text=${text}&title=${title}&id=${idFromTitle}&userId=${userId}&date=${date}`)
        .then(function (response) {
           // handle success
           console.log("response",response);

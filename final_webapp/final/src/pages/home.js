@@ -28,9 +28,8 @@ function Home({userInfo, loggedIn, LogoutFunc}){
 	//function UploadImage()
 	//const = storageref = firebase.sotrage().ref();
 	//const fileReference = e.currentTarget
-
 	return (
-		<div>
+		<div className = "Home">
 			<nav className = "Header">
 				<h2>Home</h2>
 				<button className = "buttonOpen__red"><a onClick = {() => LogoutFunc()}>Log Out</a></button>
@@ -40,8 +39,8 @@ function Home({userInfo, loggedIn, LogoutFunc}){
 					<div className = "HomePost">
 						<h3>{post.title}</h3>
 						<hr/>
-						<a href = {`/post/${post.id}`}>See Post</a>
-						<p className = "date">1.10.19</p>
+						<a href = {`/post/${post.id}`}>{post.text.slice(0,30)}</a>
+						<p className = "date">{post.date}</p>
 					</div>
 				))}
 			</div>

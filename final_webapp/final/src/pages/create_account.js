@@ -3,12 +3,9 @@ import CreateAccountForm from "../components/create_account_form"
 
 function CreateAccount({CreateFunc}){
 	return(
-		<div>
-			<h2>Create Account</h2>	
-			<p>Enter your information down below. Everything with a * is required</p>
+		<div  className = "create_account">
 			<CreateAccountForm CreateFunc={CreateFunc}/>
-			<hr/>
-			<button className = "buttonOpen__red"><a href="/login">back to login</a></button>
+			<button className = "buttonOpen"><a href="/login">back to login</a></button>
 		</div>
 	);
 }

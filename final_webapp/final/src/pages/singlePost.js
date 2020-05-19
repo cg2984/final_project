@@ -36,7 +36,7 @@ function SinglePost(){
 				<h3>{postData.title}</h3>
 				<hr/>
 				<p>{postData.text}</p>
-				<p className = "date">1.10.19</p>
+				<p className = "date">{postData.date}</p>
 			</div>
 		</div>
 	);

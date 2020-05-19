@@ -2,7 +2,9 @@ import React from "react";
 
 function CreateAccountForm({CreateFunc}){
 	return (
-		<div>
+		<div className = "account_form">
+			<h1>Create Account</h1>	
+			<p>Enter your information down below. Everything with a * is required</p>
 			<form className = "signUpForm" onSubmit={(e) => CreateFunc(e)}>
 				<label htmlFor="createEmail"><p>Email*</p></label>
 				<input type = "email" name = "createEmail"/>
