@@ -8,7 +8,7 @@ import Home from "./pages/home";
 import Login from "./pages/login";
 import CreateAccount from "./pages/create_account";
 import CreatePost from "./pages/create_post";
-import Footer from "./components/footer.js"
+import Footer from "./components/footer_home.js"
 import SinglePost from "./pages/singlePost";
 import axios from "axios";
 import {
@@ -175,7 +175,7 @@ useEffect(() => {
             {!loggedIn ? (
               <Redirect to="/login"/> 
               ) : (
-              <CreatePost CreatePostFunc={CreatePostFunc}/>
+              <CreatePost CreatePostFunc={CreatePostFunc} loggedIn = {loggedIn}/>
             )}
           </Route>
           <Route exact path="/">
@@ -192,7 +192,6 @@ useEffect(() => {
                 <Redirect to="/"/>
               )}
           </Route>
-          <Footer CreatePostFunc={CreatePostFunc} loggedIn={loggedIn}/>
         </Router>
     </div>
   );

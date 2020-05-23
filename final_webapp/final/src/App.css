@@ -50,7 +50,7 @@ a{
   margin:10px auto;
 }
 
-.buttonOpen__footer{
+.buttonOpen__footer__light{
   height:40px;
   width:220px;
   outline:none;
@@ -59,7 +59,25 @@ a{
   border:solid 0px #FFFFFF;
 }
 
-.buttonOpen__footer a{
+.buttonOpen__footer__dark{
+  height:40px;
+  width:220px;
+  outline:none;
+  margin:5px auto;
+  background-color:rgba(255, 0, 0, 0);
+  border:solid 0px #FFFFFF;
+}
+
+.buttonOpen__footer__light a{
+  font-family: Quicksand;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color:#B1C8F6;
+  text-decoration:none;
+}
+
+.buttonOpen__footer__dark a{
   font-family: Quicksand;
   font-weight: 700;
   font-size: 14px;

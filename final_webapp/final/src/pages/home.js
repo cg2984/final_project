@@ -1,6 +1,7 @@
 import React, {useEffect,useState} from 'react';
 import axios from 'axios';
 import CreatePostForm from "../components/create_post_form.js"
+import FooterHome from "../components/footer_home.js"
 
 function Home({userInfo, loggedIn, LogoutFunc}){
 	const[allPosts, setAllPosts] = useState([]);
@@ -44,6 +45,7 @@ function Home({userInfo, loggedIn, LogoutFunc}){
 					</div>
 				))}
 			</div>
+			<FooterHome loggedIn={loggedIn}/>
 		</div>
 	);
 }

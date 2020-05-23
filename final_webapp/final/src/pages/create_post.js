@@ -1,7 +1,8 @@
 import React from "react";
 import CreatePostForm from "../components/create_post_form"
+import FooterCreate from "../components/footer_create.js"
 
-function CreatePost({CreatePostFunc}){
+function CreatePost({CreatePostFunc, loggedIn}){
 	return (
 		<div>
 			<nav className = "Header">
@@ -10,6 +11,7 @@ function CreatePost({CreatePostFunc}){
 			</nav>	
 			<p>Enter your information down below. Everything with a * is required</p>
 			<CreatePostForm CreatePostFunc={CreatePostFunc}/>
+			<FooterCreate loggedIn={loggedIn}/>
 		</div>
 	);
 }
