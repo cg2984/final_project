@@ -1,5 +1,6 @@
 import React from "react";
 import CreatePostForm from "../components/create_post_form"
+import Footer from "./components/footer.js"
 
 function CreatePost({CreatePostFunc}){
 	return (
@@ -10,6 +11,7 @@ function CreatePost({CreatePostFunc}){
 			</nav>	
 			<p>Enter your information down below. Everything with a * is required</p>
 			<CreatePostForm CreatePostFunc={CreatePostFunc}/>
+			<Footer/>
 		</div>
 	);
 }
